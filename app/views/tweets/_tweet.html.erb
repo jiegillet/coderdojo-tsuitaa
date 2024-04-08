@@ -1,17 +1,14 @@
-<div id="<%= dom_id tweet %>">
-  <p>
-    <strong>User:</strong>
-    <%= tweet.user_id %>
-  </p>
+<div id="<%= dom_id tweet %>" style="display: flex; flex-direction: row; gap: 5px;">
 
-  <p>
-    <strong>Body:</strong>
-    <%= tweet.body %>
-  </p>
+  <img src="<%= tweet.user.image %>" height=40 style="border-radius: 5px;"/>
+  <div style="width: 100%;">
+    <strong> <%= tweet.user.name %> </strong>
+    <%= tweet.user.handle %>
 
-  <p>
-    <strong>Likes:</strong>
-    <%= tweet.likes %>
-  </p>
-
+    <p style="margin: 5px 0;"> <%= tweet.body %> </p>
+    <div style="text-align: right;">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/f/f1/Heart_coraz%C3%B3n.svg" height=15 />
+      <span style="text-align: right;"> <%= tweet.likes %> </span>
+    </div>
+  </div>
 </div>

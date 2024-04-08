@@ -2,12 +2,11 @@
 
 <h1>Tweets</h1>
 
-<div id="tweets">
-  <% @tweets.each do |tweet| %>
+<div id="tweets" style="width: 400px; margin: 0 auto;">
+<hr />
+<% @tweets.each do |tweet| %>
     <%= render tweet %>
-    <p>
-      <%= link_to "Show this tweet", tweet %>
-    </p>
+    <hr />
   <% end %>
 </div>
 
